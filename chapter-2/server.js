@@ -2,9 +2,11 @@ const express = require('express')
 const app = express()
 const PORT = 8383
 
-let data = {
-    "name": "Nelly"
-}
+let data = ["Nelly"]
+
+// Middleware
+// server expect json as incomming data
+app.use(express.json())
 
 // Respond
 app.get("/", (req, res) => {
@@ -34,7 +36,7 @@ app.get("/dashboard", (req, res) => {
 // Data
 app.get("/api/data", (req, res) => {
     console.log("Sending requested data...")
-    res.send(data)
+    res.status(200).send(data)
 })
 
 app.post("/api/data", (req, res) => {
