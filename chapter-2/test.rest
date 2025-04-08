@@ -1,0 +1,18 @@
+### GET/
+GET http://localhost:8383
+
+### GET/dashboard
+GET http://localhost:8383/dashboard
+
+### GET/api/data
+GET http://localhost:8383/data
+
+### POST POST/api/data
+POST http://localhost:8383/api/data
+Content-Type: application/json
+{
+    "name": "Kelly"
+}
+
+### DELETE/api/data
+DELETE http://localhost:8383/api/data
